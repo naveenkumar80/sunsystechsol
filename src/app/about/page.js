@@ -8,8 +8,8 @@ import AboutCertifications from '@/components/about/AboutCertifications'
 import AboutCTA from '@/components/about/AboutCTA'
 
 export const metadata = {
-  title: 'About Us | NexaTech Solutions',
-  description: 'Learn about NexaTech Solutions - our story, mission, values, and the expert team behind innovative IT solutions.',
+  title: 'About Us | SunsysTechsol Solutions',
+  description: 'Learn about SunsysTechsol Solutions - our story, mission, values, and the expert team behind innovative IT solutions.',
   keywords: ['about us', 'our story', 'our team', 'company values', 'IT experts', 'technology team'],
 }
 

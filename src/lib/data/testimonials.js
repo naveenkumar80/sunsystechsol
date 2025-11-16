@@ -6,7 +6,7 @@ export const testimonials = [
     company: 'TechStart Inc.',
     avatar: '👩‍💼',
     rating: 5,
-    text: 'NexaTech transformed our outdated website into a modern, high-converting platform. Our online sales increased by 250% in just 6 months!'
+    text: 'SunsysTechsol transformed our outdated website into a modern, high-converting platform. Our online sales increased by 250% in just 6 months!'
   },
   {
     id: 2,

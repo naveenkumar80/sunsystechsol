@@ -61,7 +61,7 @@ export default function Navbar() {
               <span className={`font-heading font-bold text-xl ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
-                NexaTech
+                SunsysTechsol
               </span>
             </Link>
 

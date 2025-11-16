@@ -12,7 +12,7 @@ const team = [
     avatar: '👨‍💼',
     linkedin: '#',
     twitter: '#',
-    email: 'john@nexatech.com'
+    email: 'john@SunsysTechsol.com'
   },
   {
     name: 'Sarah Chen',
@@ -21,7 +21,7 @@ const team = [
     avatar: '👩‍💻',
     linkedin: '#',
     twitter: '#',
-    email: 'sarah@nexatech.com'
+    email: 'sarah@SunsysTechsol.com'
   },
   {
     name: 'Michael Rodriguez',
@@ -30,7 +30,7 @@ const team = [
     avatar: '👨‍🎨',
     linkedin: '#',
     twitter: '#',
-    email: 'michael@nexatech.com'
+    email: 'michael@SunsysTechsol.com'
   },
   {
     name: 'Emily Johnson',
@@ -39,7 +39,7 @@ const team = [
     avatar: '👩‍💼',
     linkedin: '#',
     twitter: '#',
-    email: 'emily@nexatech.com'
+    email: 'emily@SunsysTechsol.com'
   },
   {
     name: 'David Park',
@@ -48,7 +48,7 @@ const team = [
     avatar: '👨‍💻',
     linkedin: '#',
     twitter: '#',
-    email: 'david@nexatech.com'
+    email: 'david@SunsysTechsol.com'
   },
   {
     name: 'Lisa Thompson',
@@ -57,7 +57,7 @@ const team = [
     avatar: '👩‍💼',
     linkedin: '#',
     twitter: '#',
-    email: 'lisa@nexatech.com'
+    email: 'lisa@SunsysTechsol.com'
   }
 ]
 
@@ -67,7 +67,7 @@ export default function AboutTeam() {
       <div className="container-custom">
         <SectionHeader
           badge="Our Team"
-          title="Meet the Experts Behind NexaTech"
+          title="Meet the Experts Behind SunsysTechsol"
           subtitle="Talented professionals passionate about technology and your success"
         />
 

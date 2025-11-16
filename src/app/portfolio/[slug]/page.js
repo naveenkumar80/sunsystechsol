@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${project.title} | Portfolio | NexaTech Solutions`,
+    title: `${project.title} | Portfolio | SunsysTechsol Solutions`,
     description: project.shortDescription,
     keywords: [project.category, ...project.tags],
   }

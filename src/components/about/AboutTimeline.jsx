@@ -7,7 +7,7 @@ const milestones = [
   {
     year: '2015',
     title: 'Company Founded',
-    description: 'NexaTech Solutions was born with a team of 3 passionate developers'
+    description: 'SunsysTechsol Solutions was born with a team of 3 passionate developers'
   },
   {
     year: '2017',

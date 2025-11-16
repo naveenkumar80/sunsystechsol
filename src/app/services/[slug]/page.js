@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${service.title} | NexaTech Solutions`,
+    title: `${service.title} | SunsysTechsol Solutions`,
     description: service.description,
     keywords: service.keywords,
   }

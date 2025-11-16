@@ -20,7 +20,7 @@ export default function AboutStory() {
             <h2 className="mb-6">From Startup to Industry Leader</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Founded in 2015, NexaTech Solutions started with a simple mission: to help 
+                Founded in 2015, SunsysTechsol Solutions started with a simple mission: to help 
                 businesses leverage technology for growth. What began as a small team of 
                 developers has grown into a full-service IT agency serving clients across the globe.
               </p>

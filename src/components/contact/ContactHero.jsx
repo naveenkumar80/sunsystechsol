@@ -65,8 +65,8 @@ export default function ContactHero() {
             >
               <Mail className="w-8 h-8 text-accent mx-auto mb-3" />
               <p className="text-white font-semibold mb-1">Email</p>
-              <a href="mailto:info@nexatech.com" className="text-gray-200 hover:text-white transition-colors">
-                info@nexatech.com
+              <a href="mailto:info@SunsysTechsol.com" className="text-gray-200 hover:text-white transition-colors">
+                info@SunsysTechsol.com
               </a>
             </motion.div>
 

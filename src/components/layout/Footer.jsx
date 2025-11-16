@@ -52,7 +52,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-xl">N</span>
               </div>
               <span className="font-heading font-bold text-xl text-white">
-                NexaTech
+                SunsysTechsol
               </span>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
@@ -62,8 +62,8 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:info@nexatech.com" className="hover:text-white transition-colors">
-                  info@nexatech.com
+                <a href="mailto:info@SunsysTechsol.com" className="hover:text-white transition-colors">
+                  info@SunsysTechsol.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -162,7 +162,7 @@ export default function Footer() {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 px-4">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} NexaTech Solutions. All rights reserved.
+              © {new Date().getFullYear()} SunsysTechsol Solutions. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               {socialLinks.map((social) => {

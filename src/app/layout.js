@@ -18,7 +18,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'NexaTech Solutions | IT Services & Digital Solutions',
+  title: 'SunsysTechsol Solutions | IT Services & Digital Solutions',
   description: 'Leading IT agency offering website development, mobile apps, SEO, social media marketing, and comprehensive IT support services.',
   keywords: ['IT services', 'website development', 'mobile app development', 'SEO', 'digital marketing', 'IT support'],
 }

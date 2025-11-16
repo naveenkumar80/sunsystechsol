@@ -27,8 +27,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     description: "We'll respond within 24 hours",
-    value: 'info@nexatech.com',
-    link: 'mailto:info@nexatech.com',
+    value: 'info@SunsysTechsol.com',
+    link: 'mailto:info@SunsysTechsol.com',
     color: 'text-red-500'
   },
   {

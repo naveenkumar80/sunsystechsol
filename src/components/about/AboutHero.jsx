@@ -35,7 +35,7 @@ export default function AboutHero() {
           className="text-center max-w-3xl mx-auto"
         >
           <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
-            About NexaTech
+            About SunsysTechsol
           </span>
           
           <h1 className="text-white mb-6">

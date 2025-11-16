@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
       <div className="container-custom">
         <SectionHeader
           badge="Why Choose Us"
-          title="Why Leading Brands Choose NexaTech"
+          title="Why Leading Brands Choose SunsysTechsol"
           subtitle="We combine technical expertise with business acumen to deliver solutions that drive real results"
         />
 

@@ -39,7 +39,7 @@ export const portfolioData = [
       'Guest checkout option'
     ],
     testimonial: {
-      text: "NexaTech transformed our online business. Sales have tripled since launch!",
+      text: "SunsysTechsol transformed our online business. Sales have tripled since launch!",
       author: "Jessica Miller",
       role: "CEO, StyleHub Fashion"
     }
