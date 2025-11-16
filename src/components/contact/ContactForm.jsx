@@ -21,22 +21,28 @@ export default function ContactForm() {
     setSubmitStatus(null)
 
     try {
-      // Simulate API call - Replace with actual API endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      // For now, just log the data
-      console.log('Form submitted:', data)
-      
-      setSubmitStatus('success')
-      reset()
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000)
+      const response = await fetch('http://localhost:5000/api/leads', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success')
+        reset()
+      } else {
+        setSubmitStatus('error')
+      }
     } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus('error')
-      setTimeout(() => setSubmitStatus(null), 5000)
     } finally {
       setIsSubmitting(false)
+      setTimeout(() => setSubmitStatus(null), 5000)
     }
   }
 
