@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const service = servicesData[params.slug]
+  const { slug } =  await params
+  const service = servicesData[slug]
   
   if (!service) {
     return {
@@ -29,8 +30,9 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function ServiceDetailPage({ params }) {
-  const service = servicesData[params.slug]
+export default async function ServiceDetailPage({ params }) {
+  const { slug } = await params
+  const service = servicesData[slug]
 
   if (!service) {
     notFound()
