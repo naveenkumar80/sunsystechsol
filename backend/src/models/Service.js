@@ -3,34 +3,42 @@ const mongoose = require('mongoose')
 const serviceSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    required: [true, 'Service title is required'],
     trim: true
   },
   slug: {
     type: String,
-    required: true,
+    required: [true, 'Service slug is required'],
     unique: true,
     lowercase: true
   },
   category: {
     type: String,
-    required: true
+    required: false,
+    trim: true
   },
   shortDescription: {
     type: String,
-    required: true,
-    maxlength: 200
+    required: [true, 'Short description is required'],
+    maxlength: [200, 'Short description cannot exceed 200 characters']
   },
   fullDescription: {
     type: String,
-    required: true
+    required: [true, 'Full description is required']
   },
   icon: {
-    type: String
+    type: String,
+    default: 'Code'
   },
   features: [{
-    title: String,
-    description: String
+    title: {
+      type: String,
+      required: false
+    },
+    description: {
+      type: String,
+      required: false
+    }
   }],
   pricing: {
     starter: {
@@ -46,10 +54,22 @@ const serviceSchema = new mongoose.Schema({
       features: [String]
     }
   },
-  technologies: [String],
-  metaTitle: String,
-  metaDescription: String,
-  keywords: [String],
+  technologies: {
+    type: [String],
+    default: []
+  },
+  metaTitle: {
+    type: String,
+    required: false
+  },
+  metaDescription: {
+    type: String,
+    required: false
+  },
+  keywords: {
+    type: [String],
+    default: []
+  },
   isActive: {
     type: Boolean,
     default: true
