@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { 
   Search, 
@@ -17,9 +18,12 @@ import ProtectedRoute from '@/components/admin/ProtectedRoute'
 import { leadsAPI } from '@/lib/api/admin'
 
 export default function AdminLeadsPage() {
+  const searchParams = useSearchParams()
+  const urlSearch = searchParams.get('search')
+  
   const [leads, setLeads] = useState([])
   const [loading, setLoading] = useState(true)
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState(urlSearch || '')
   const [statusFilter, setStatusFilter] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
@@ -27,8 +31,15 @@ export default function AdminLeadsPage() {
   const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
+    // Set search term from URL if present
+    if (urlSearch) {
+      setSearchTerm(urlSearch)
+    }
+  }, [urlSearch])
+
+  useEffect(() => {
     fetchLeads()
-  }, [currentPage, statusFilter])
+  }, [currentPage, statusFilter, urlSearch])
 
   const fetchLeads = async () => {
     setLoading(true)
@@ -126,7 +137,7 @@ export default function AdminLeadsPage() {
                   type="text"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Search leads..."
+                  placeholder="Search by name, email, or service..."
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -152,6 +163,25 @@ export default function AdminLeadsPage() {
               </select>
             </div>
           </div>
+          
+          {/* Search Info */}
+          {searchTerm && (
+            <div className="mt-4 flex items-center justify-between">
+              <p className="text-sm text-gray-600">
+                Searching for: <span className="font-semibold">"{searchTerm}"</span>
+              </p>
+              <button
+                onClick={() => {
+                  setSearchTerm('')
+                  setCurrentPage(1)
+                  fetchLeads()
+                }}
+                className="text-sm text-primary hover:underline"
+              >
+                Clear search
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Leads Table */}
@@ -220,7 +250,7 @@ export default function AdminLeadsPage() {
                           <select
                             value={lead.status}
                             onChange={(e) => handleStatusChange(lead._id, e.target.value)}
-                            className={`px-3 py-1 rounded-full text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-primary ${
+                            className={`px-3 py-1 rounded-full text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer ${
                               lead.status === 'New' ? 'bg-blue-100 text-blue-800' :
                               lead.status === 'Contacted' ? 'bg-yellow-100 text-yellow-800' :
                               lead.status === 'Qualified' ? 'bg-purple-100 text-purple-800' :
@@ -274,14 +304,14 @@ export default function AdminLeadsPage() {
                   <button
                     onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                     disabled={currentPage === 1}
-                    className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                     disabled={currentPage === totalPages}
-                    className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -290,7 +320,20 @@ export default function AdminLeadsPage() {
             </>
           ) : (
             <div className="text-center py-12">
-              <p className="text-gray-500">No leads found</p>
+              <p className="text-gray-500 text-lg">
+                {searchTerm ? `No leads found for "${searchTerm}"` : 'No leads found'}
+              </p>
+              {searchTerm && (
+                <button
+                  onClick={() => {
+                    setSearchTerm('')
+                    fetchLeads()
+                  }}
+                  className="mt-4 text-primary hover:underline"
+                >
+                  Clear search and view all leads
+                </button>
+              )}
             </div>
           )}
         </div>
@@ -308,9 +351,9 @@ export default function AdminLeadsPage() {
                   <h2 className="text-2xl font-bold text-gray-900">Lead Details</h2>
                   <button
                     onClick={() => setShowModal(false)}
-                    className="text-gray-400 hover:text-gray-600"
+                    className="text-gray-400 hover:text-gray-600 text-2xl leading-none"
                   >
-                    ✕
+                    ×
                   </button>
                 </div>
               </div>
@@ -368,13 +411,13 @@ export default function AdminLeadsPage() {
               <div className="p-6 border-t border-gray-200 flex justify-end space-x-3">
                 <button
                   onClick={() => setShowModal(false)}
-                  className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                  className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   Close
                 </button>
                 <a
                   href={`mailto:${selectedLead.email}`}
-                  className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90"
+                  className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
                 >
                   Send Email
                 </a>
