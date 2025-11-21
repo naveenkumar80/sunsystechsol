@@ -2,9 +2,23 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Code, Smartphone, Megaphone, TrendingUp, Headphones, BarChart3, Lightbulb, Network } from 'lucide-react'
 
-export default function ServiceCard({ icon: Icon, title, description, href }) {
+// Icon mapping
+const iconMap = {
+  Code,
+  Smartphone,
+  Megaphone,
+  TrendingUp,
+  Headphones,
+  BarChart3,
+  Lightbulb,
+  Network
+}
+
+export default function ServiceCard({ icon, title, description, href }) {
+  const IconComponent = iconMap[icon] || Code
+
   return (
     <motion.div
       whileHover={{ y: -8 }}
@@ -12,7 +26,7 @@ export default function ServiceCard({ icon: Icon, title, description, href }) {
     >
       <div className="mb-6">
         <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <Icon className="w-8 h-8 text-primary" />
+          <IconComponent className="w-8 h-8 text-primary" />
         </div>
       </div>
       
