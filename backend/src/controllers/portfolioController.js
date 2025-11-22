@@ -5,6 +5,8 @@ const Portfolio = require('../models/Portfolio')
 // @access  Public
 exports.getAllPortfolio = async (req, res) => {
   try {
+    console.log('📡 GET /api/portfolio - Request received')
+    
     const { category, featured } = req.query
     const query = { isActive: true }
 
@@ -15,7 +17,12 @@ exports.getAllPortfolio = async (req, res) => {
       query.featured = true
     }
 
-    const portfolio = await Portfolio.find(query).sort({ order: 1, createdAt: -1 })
+    console.log('🔍 Query:', query)
+
+    const portfolio = await Portfolio.find(query)
+      .sort({ order: 1, createdAt: -1 })
+
+    console.log(`✅ Found ${portfolio.length} portfolio items`)
 
     res.json({
       success: true,
@@ -23,6 +30,7 @@ exports.getAllPortfolio = async (req, res) => {
       data: portfolio
     })
   } catch (error) {
+    console.error('❌ Error in getAllPortfolio:', error)
     res.status(500).json({
       success: false,
       message: error.message
@@ -35,23 +43,29 @@ exports.getAllPortfolio = async (req, res) => {
 // @access  Public
 exports.getPortfolioItem = async (req, res) => {
   try {
+    console.log('📡 GET /api/portfolio/:slug - Request for:', req.params.slug)
+    
     const portfolio = await Portfolio.findOne({ 
       slug: req.params.slug, 
       isActive: true 
     })
 
     if (!portfolio) {
+      console.log('❌ Portfolio item not found')
       return res.status(404).json({
         success: false,
         message: 'Portfolio item not found'
       })
     }
 
+    console.log('✅ Found portfolio item:', portfolio.title)
+
     res.json({
       success: true,
       data: portfolio
     })
   } catch (error) {
+    console.error('❌ Error in getPortfolioItem:', error)
     res.status(500).json({
       success: false,
       message: error.message
@@ -64,7 +78,12 @@ exports.getPortfolioItem = async (req, res) => {
 // @access  Private (Admin)
 exports.createPortfolio = async (req, res) => {
   try {
+    console.log('📡 POST /api/portfolio - Creating new item')
+    console.log('📦 Data:', req.body)
+    
     const portfolio = await Portfolio.create(req.body)
+    
+    console.log('✅ Created portfolio item:', portfolio._id)
 
     res.status(201).json({
       success: true,
@@ -72,6 +91,7 @@ exports.createPortfolio = async (req, res) => {
       data: portfolio
     })
   } catch (error) {
+    console.error('❌ Error creating portfolio:', error)
     res.status(500).json({
       success: false,
       message: error.message
@@ -84,6 +104,8 @@ exports.createPortfolio = async (req, res) => {
 // @access  Private (Admin)
 exports.updatePortfolio = async (req, res) => {
   try {
+    console.log('📡 PUT /api/portfolio/:id - Updating:', req.params.id)
+    
     const portfolio = await Portfolio.findByIdAndUpdate(
       req.params.id,
       req.body,
@@ -91,11 +113,14 @@ exports.updatePortfolio = async (req, res) => {
     )
 
     if (!portfolio) {
+      console.log('❌ Portfolio item not found')
       return res.status(404).json({
         success: false,
         message: 'Portfolio item not found'
       })
     }
+
+    console.log('✅ Updated portfolio item:', portfolio.title)
 
     res.json({
       success: true,
@@ -103,6 +128,7 @@ exports.updatePortfolio = async (req, res) => {
       data: portfolio
     })
   } catch (error) {
+    console.error('❌ Error updating portfolio:', error)
     res.status(500).json({
       success: false,
       message: error.message
@@ -115,9 +141,12 @@ exports.updatePortfolio = async (req, res) => {
 // @access  Private (Admin)
 exports.deletePortfolio = async (req, res) => {
   try {
+    console.log('📡 DELETE /api/portfolio/:id - Deleting:', req.params.id)
+    
     const portfolio = await Portfolio.findById(req.params.id)
 
     if (!portfolio) {
+      console.log('❌ Portfolio item not found')
       return res.status(404).json({
         success: false,
         message: 'Portfolio item not found'
@@ -125,12 +154,14 @@ exports.deletePortfolio = async (req, res) => {
     }
 
     await portfolio.deleteOne()
+    console.log('✅ Deleted portfolio item')
 
     res.json({
       success: true,
       message: 'Portfolio item deleted successfully'
     })
   } catch (error) {
+    console.error('❌ Error deleting portfolio:', error)
     res.status(500).json({
       success: false,
       message: error.message

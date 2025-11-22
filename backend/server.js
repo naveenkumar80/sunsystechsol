@@ -36,7 +36,7 @@ app.use(compression())
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  max: 100,
   message: 'Too many requests from this IP, please try again later.'
 })
 
@@ -51,6 +51,12 @@ app.get('/health', (req, res) => {
   })
 })
 
+// Log all API requests
+app.use('/api', (req, res, next) => {
+  console.log(`📡 ${req.method} ${req.originalUrl}`)
+  next()
+})
+
 // API Routes
 app.use('/api/auth', require('./src/routes/auth'))
 app.use('/api/leads', require('./src/routes/leads'))
@@ -59,11 +65,29 @@ app.use('/api/portfolio', require('./src/routes/portfolio'))
 app.use('/api/blog', require('./src/routes/blog'))
 app.use('/api/testimonials', require('./src/routes/testimonials'))
 
+// Test route to verify portfolio route is working
+app.get('/api/test/portfolio', async (req, res) => {
+  try {
+    const Portfolio = require('./src/models/Portfolio')
+    const count = await Portfolio.countDocuments()
+    const items = await Portfolio.find().limit(5)
+    res.json({
+      message: 'Portfolio test route',
+      count,
+      items
+    })
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+})
+
 // 404 handler
 app.use((req, res) => {
+  console.log('❌ 404 - Route not found:', req.originalUrl)
   res.status(404).json({
     success: false,
-    message: 'Route not found'
+    message: 'Route not found',
+    requestedUrl: req.originalUrl
   })
 })
 
@@ -87,6 +111,15 @@ const server = app.listen(PORT, () => {
     ║                                        ║
     ╚════════════════════════════════════════╝
   `)
+  
+  // List all registered routes
+  console.log('\n📋 Registered Routes:')
+  console.log('   GET  /health')
+  console.log('   POST /api/auth/login')
+  console.log('   GET  /api/services')
+  console.log('   GET  /api/portfolio')
+  console.log('   GET  /api/test/portfolio')
+  console.log('   ...\n')
 })
 
 // Handle unhandled promise rejections

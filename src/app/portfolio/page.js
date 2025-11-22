@@ -1,18 +1,45 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import PortfolioHero from '@/components/portfolio/PortfolioHero'
 import PortfolioGrid from '@/components/portfolio/PortfolioGrid'
 import PortfolioCTA from '@/components/portfolio/PortfolioCTA'
 
-export const metadata = {
-  title: 'Our Portfolio | SunsysTechsol Solutions',
-  description: 'Explore our portfolio of successful web development, mobile app, and digital transformation projects. See how we help businesses achieve their goals.',
-  keywords: ['portfolio', 'case studies', 'projects', 'web development portfolio', 'mobile app projects'],
-}
-
 export default function PortfolioPage() {
+  const [portfolioData, setPortfolioData] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetchPortfolio()
+  }, [])
+
+  const fetchPortfolio = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/portfolio')
+      const data = await response.json()
+      
+      if (data.success) {
+        setPortfolioData(data.data)
+      }
+    } catch (error) {
+      console.error('Error fetching portfolio:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    )
+  }
+
   return (
     <>
       <PortfolioHero />
-      <PortfolioGrid />
+      <PortfolioGrid portfolioData={portfolioData} />
       <PortfolioCTA />
     </>
   )
