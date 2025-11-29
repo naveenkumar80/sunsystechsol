@@ -65,7 +65,7 @@ export default function AdminSidebar() {
             <span className="text-white font-bold text-xl">N</span>
           </div>
           <div>
-            <h1 className="font-heading font-bold text-lg">NexaTech</h1>
+            <h1 className="font-heading font-bold text-lg">SunsysTechsol</h1>
             <p className="text-xs text-gray-400">Admin Panel</p>
           </div>
         </div>

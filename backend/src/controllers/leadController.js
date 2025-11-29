@@ -23,7 +23,7 @@ exports.createLead = async (req, res) => {
     try {
       await sendEmail({
         to: process.env.ADMIN_EMAIL,
-        subject: '🔔 New Lead Received - NexaTech',
+        subject: '🔔 New Lead Received - SunsysTechsol',
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #0066FF;">New Lead Received</h2>
@@ -52,7 +52,7 @@ exports.createLead = async (req, res) => {
     try {
       await sendEmail({
         to: email,
-        subject: 'Thank you for contacting NexaTech Solutions',
+        subject: 'Thank you for contacting SunsysTechsol Solutions',
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #0066FF;">Thank You, ${name}!</h2>
@@ -69,7 +69,7 @@ exports.createLead = async (req, res) => {
             </ul>
             <p style="margin-top: 30px;">
               Best regards,<br>
-              <strong>The NexaTech Team</strong>
+              <strong>The SunsysTechsol Team</strong>
             </p>
           </div>
         `

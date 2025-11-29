@@ -52,8 +52,8 @@ export default function ContactHero() {
             >
               <Phone className="w-8 h-8 text-accent mx-auto mb-3" />
               <p className="text-white font-semibold mb-1">Phone</p>
-              <a href="tel:+1234567890" className="text-gray-200 hover:text-white transition-colors">
-                +1 (234) 567-890
+              <a href="tel:+919105837321" className="text-gray-200 hover:text-white transition-colors">
+                +91 
               </a>
             </motion.div>
 
@@ -65,8 +65,8 @@ export default function ContactHero() {
             >
               <Mail className="w-8 h-8 text-accent mx-auto mb-3" />
               <p className="text-white font-semibold mb-1">Email</p>
-              <a href="mailto:info@SunsysTechsol.com" className="text-gray-200 hover:text-white transition-colors">
-                info@SunsysTechsol.com
+              <a href="mailto:sunsystechsol@gmail.com" className="text-gray-200 hover:text-white transition-colors">
+                sunsystechsol@gmail.com
               </a>
             </motion.div>
 
@@ -79,7 +79,8 @@ export default function ContactHero() {
               <MapPin className="w-8 h-8 text-accent mx-auto mb-3" />
               <p className="text-white font-semibold mb-1">Location</p>
               <p className="text-gray-200">
-                123 Tech Street, Innovation City
+                Shop No. 6, H.NO. 44, Vaijanti Resort, Kalal Khairiya
+                Fatehabad Road, Agra, Uttar Pradesh – 282001
               </p>
             </motion.div>
           </div>

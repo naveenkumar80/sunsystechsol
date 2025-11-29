@@ -19,16 +19,16 @@ const contactMethods = [
     icon: Phone,
     title: 'Phone',
     description: 'Mon-Fri from 8am to 5pm',
-    value: '+1 (234) 567-890',
-    link: 'tel:+1234567890',
+    value: '+91 9105837321',
+    link: 'tel:+919105837321',
     color: 'text-blue-500'
   },
   {
     icon: Mail,
     title: 'Email',
     description: "We'll respond within 24 hours",
-    value: 'info@SunsysTechsol.com',
-    link: 'mailto:info@SunsysTechsol.com',
+    value: 'sunsystechsol@gmail.com',
+    link: 'mailto:sunsystechsol@gmail.com',
     color: 'text-red-500'
   },
   {
@@ -43,18 +43,18 @@ const contactMethods = [
     icon: MapPin,
     title: 'Office',
     description: 'Visit us in person',
-    value: '123 Tech Street, Innovation City',
+    value: 'Shop No. 6, H.NO. 44, Vaijanti Resort, Kalal KhairiyaFatehabad Road, Agra, Uttar Pradesh – 282001',
     link: 'https://maps.google.com',
     color: 'text-purple-500'
   },
 ]
 
 const socialLinks = [
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com', color: 'hover:text-blue-600' },
+  { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/people/Sunsys-Techsol/61577192545055/', color: 'hover:text-blue-600' },
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com', color: 'hover:text-sky-500' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com', color: 'hover:text-pink-600' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com', color: 'hover:text-blue-700' },
-  { name: 'YouTube', icon: Youtube, href: 'https://youtube.com', color: 'hover:text-red-600' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/sunsys_techsol', color: 'hover:text-pink-600' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/sunsystechsol-pvt-ltd/posts/?feedView=all', color: 'hover:text-blue-700' },
+  { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@sunsystechsol', color: 'hover:text-red-600' },
 ]
 
 export default function ContactInfo() {

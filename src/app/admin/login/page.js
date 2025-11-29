@@ -60,7 +60,7 @@ export default function AdminLoginPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="admin@nexatech.com"
+                  placeholder="admin@SunsysTechsol.com"
                 />
               </div>
             </div>
@@ -103,14 +103,14 @@ export default function AdminLoginPage() {
           {/* Demo Credentials */}
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm font-medium text-blue-900 mb-2">Demo Credentials:</p>
-            <p className="text-sm text-blue-800">Email: admin@nexatech.com</p>
+            <p className="text-sm text-blue-800">Email: admin@SunsysTechsol.com</p>
             <p className="text-sm text-blue-800">Password: admin123456</p>
           </div>
         </div>
 
         {/* Footer */}
         <p className="text-center text-sm text-gray-300 mt-6">
-          © 2025 NexaTech Solutions. All rights reserved.
+          © 2025 SunsysTechsol Solutions. All rights reserved.
         </p>
       </div>
     </div>

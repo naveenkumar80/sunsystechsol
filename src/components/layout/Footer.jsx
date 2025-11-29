@@ -1,4 +1,8 @@
+"use client";
+
+
 import Link from 'next/link'
+import Image from 'next/image';
 import { 
   Facebook, 
   Twitter, 
@@ -32,11 +36,11 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
+  { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/people/Sunsys-Techsol/61577192545055/' },
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-  { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/sunsys_techsol' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/sunsystechsol-pvt-ltd/posts/?feedView=all' },
+  { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@sunsystechsol' },
 ]
 
 export default function Footer() {
@@ -48,12 +52,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">N</span>
-              </div>
-              <span className="font-heading font-bold text-xl text-white">
-                SunsysTechsol
-              </span>
+              <Image
+                                src="/images/Gemini_Generated_Image_ybfwbvybfwbvybfw (1).png"
+                                alt="SunsysTechsol Logo"
+                                width={70}
+                                height={70}
+                                className="object-cover"
+              />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Transforming businesses through innovative technology solutions. 
@@ -62,19 +67,19 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:info@SunsysTechsol.com" className="hover:text-white transition-colors">
-                  info@SunsysTechsol.com
+                <a href="mailto:sunsystechsol@gmail.com" className="hover:text-white transition-colors">
+                  sunsystechsol@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+919105837321" className="hover:text-white transition-colors">
+                  +91 9105837321
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>123 Tech Street, Innovation City</span>
+                <span>Shop No. 6, H.NO. 44, Vaijanti Resort, Kalal KhairiyaFatehabad Road, Agra, Uttar Pradesh – 282001</span>
               </div>
             </div>
           </div>
@@ -140,7 +145,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">
               Get the latest updates and industry insights delivered to your inbox.
             </p>
-            <form className="flex gap-2">
+            <form className="flex gap-2" style={{ position: "relative" }}>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -162,8 +167,7 @@ export default function Footer() {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 px-4">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} SunsysTechsol Solutions. All rights reserved.
-            </p>
+              © {new Date().getFullYear()} SunsysTechsol Solutions. All rights reserved.  Made by <a href="https://www.linkedin.com/in/naveen-k-6407b3132/" className="hover:text-white transition-colors">Naveen Kumar</a> </p>
             <div className="flex items-center space-x-6">
               {socialLinks.map((social) => {
                 const Icon = social.icon

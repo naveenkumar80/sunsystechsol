@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import Image from "next/image";
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -55,14 +56,16 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20 px-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">N</span>
-              </div>
-              <span className={`font-heading font-bold text-xl ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`}>
-                SunsysTechsol
-              </span>
+              
+                <Image
+                  src="/images/Gemini_Generated_Image_ybfwbvybfwbvybfw (1).png"
+                  alt="SunsysTechsol Logo"
+                  width={70}
+                  height={70}
+                  className="object-cover"
+               />
+            
+              
             </Link>
 
             {/* Desktop Navigation */}

@@ -14,7 +14,7 @@ const sendEmail = async (options) => {
 
   // Email options
   const mailOptions = {
-    from: `"NexaTech Solutions" <${process.env.SMTP_USER}>`,
+    from: `"SunsysTechsol Solutions" <${process.env.SMTP_USER}>`,
     to: options.to,
     subject: options.subject,
     html: options.html

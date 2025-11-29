@@ -100,7 +100,7 @@ const server = app.listen(PORT, () => {
   console.log(`
     ╔════════════════════════════════════════╗
     ║                                        ║
-    ║   🚀 NexaTech Backend Server          ║
+    ║   🚀 SunsysTechsol Backend Server          ║
     ║                                        ║
     ║   Environment: ${process.env.NODE_ENV || 'development'}                ║
     ║   Port: ${PORT}                            ║
