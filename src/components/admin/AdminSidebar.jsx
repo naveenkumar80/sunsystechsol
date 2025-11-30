@@ -1,12 +1,14 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+
 import Link from 'next/link'
 import { 
   LayoutDashboard, 
   Users, 
   Briefcase, 
-  Image, 
+  Smile,
   FileText, 
   Star,
   Settings,
@@ -33,7 +35,7 @@ const menuItems = [
   { 
     name: 'Portfolio', 
     href: '/admin/portfolio', 
-    icon: Image 
+    icon: Smile
   },
   { 
     name: 'Blog', 
@@ -61,14 +63,18 @@ export default function AdminSidebar() {
       {/* Logo */}
       <div className="flex items-center justify-center h-20 border-b border-gray-800">
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">N</span>
-          </div>
-          <div>
-            <h1 className="font-heading font-bold text-lg">SunsysTechsol</h1>
-            <p className="text-xs text-gray-400">Admin Panel</p>
-          </div>
+            <span className="text-white font-bold text-xl">
+              <Image
+                  src="/images/Gemini_Generated_Image_ybfwbvybfwbvybfw (1).png"
+                  alt="SunsysTechsol Logo"
+                  width={70}
+                  height={70}
+                  className="object-cover"
+              />
+              <p className="text-xs text-gray-400">Admin Panel</p>
+            </span>
         </div>
+        
       </div>
 
       {/* Navigation */}

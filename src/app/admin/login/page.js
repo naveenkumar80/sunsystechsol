@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useAuth } from '@/lib/context/AuthContext'
 import { Mail, Lock, AlertCircle, Loader2 } from 'lucide-react'
 
@@ -31,7 +32,15 @@ export default function AdminLoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl mb-4">
-            <span className="text-3xl font-bold text-primary">N</span>
+            <span className="text-3xl font-bold text-primary">
+              <Image
+                src="/images/Gemini_Generated_Image_ybfwbvybfwbvybfw (1).png"
+                alt="SunsysTechsol Logo"
+                width={70}
+                height={70}
+                className="object-cover"
+              />
+            </span>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Admin Login</h1>
           <p className="text-gray-200">Sign in to access the admin panel</p>
@@ -60,7 +69,7 @@ export default function AdminLoginPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="admin@SunsysTechsol.com"
+                  placeholder="sunsystechsol@gmail.com"
                 />
               </div>
             </div>
@@ -103,7 +112,7 @@ export default function AdminLoginPage() {
           {/* Demo Credentials */}
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm font-medium text-blue-900 mb-2">Demo Credentials:</p>
-            <p className="text-sm text-blue-800">Email: admin@SunsysTechsol.com</p>
+            <p className="text-sm text-blue-800">Email: sunsystechsol@gmail.com</p>
             <p className="text-sm text-blue-800">Password: admin123456</p>
           </div>
         </div>

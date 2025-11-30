@@ -8,7 +8,7 @@ const seedAdmin = async () => {
     await connectDB()
 
     // Check if admin already exists
-    const existingAdmin = await User.findOne({ email: 'admin@SunsysTechsol.com' })
+    const existingAdmin = await User.findOne({ email: 'sunsystechsol@gmail.com' })
     
     if (existingAdmin) {
       console.log('⚠️  Admin user already exists')
@@ -18,13 +18,13 @@ const seedAdmin = async () => {
     // Create admin user
     const admin = await User.create({
       name: 'Admin',
-      email: 'admin@SunsysTechsol.com',
+      email: 'sunsystechsol@gmail.com',
       password: 'admin123456',
       role: 'admin'
     })
 
     console.log('✅ Admin user created successfully')
-    console.log('📧 Email: admin@SunsysTechsol.com')
+    console.log('📧 Email: sunsystechsol@gmail.com')
     console.log('🔑 Password: admin123456')
     console.log('⚠️  IMPORTANT: Change this password after first login!')
 
