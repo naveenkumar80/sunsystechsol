@@ -153,7 +153,7 @@ export default function ContactForm() {
               <option value="it-support">IT Support</option>
               <option value="business-dev">Business Development</option>
               <option value="consulting">Consulting</option>
-              <option value="network">Network Solutions</option>
+              {/*  <option value="network">Network Solutions</option>    */}
               <option value="other">Other</option>
             </select>
           </div>

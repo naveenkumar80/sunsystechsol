@@ -65,13 +65,13 @@ export const services = [
     description: 'Expert guidance on technology adoption, digital transformation, and IT infrastructure planning.',
     href: '/services/consulting',
     slug: 'consulting'
-  },
-  {
+  }
+  /*{
     id: 8,
     icon: Network,
     title: 'Network Solutions',
     description: 'Secure, scalable network infrastructure designed for performance and reliability.',
     href: '/services/network-solutions',
     slug: 'network-solutions'
-  }
+  }*/ 
 ]

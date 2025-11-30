@@ -19,8 +19,8 @@ const navigation = [
       { name: 'SEO Optimization', href: '/services/seo-optimization' },
       { name: 'IT Support', href: '/services/it-support' },
       { name: 'Business Development', href: '/services/business-development' },
-      { name: 'Consulting', href: '/services/consulting' },
-      { name: 'Network Solutions', href: '/services/network-solutions' },
+      { name: 'Consulting', href: '/services/consulting' }
+      /*{ name: 'Network Solutions', href: '/services/network-solutions' },*/
     ]
   },
   { name: 'Portfolio', href: '/portfolio' },

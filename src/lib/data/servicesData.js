@@ -878,8 +878,8 @@ export const servicesData = {
         answer: 'After understanding your needs, we provide a fixed-price proposal with clear deliverables and timeline.'
     }
     ]
-    },
-    'network-solutions': {
+    }
+    /*'network-solutions': {
         title: 'Network Solutions',
         slug: 'network-solutions',
         description: 'Secure, scalable network infrastructure designed for performance and reliability.',
@@ -1005,4 +1005,5 @@ export const servicesData = {
     }
     ]
     },
+   */ 
 }

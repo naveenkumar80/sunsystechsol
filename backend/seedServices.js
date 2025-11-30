@@ -122,8 +122,8 @@ const services = [
     technologies: ['AWS', 'Azure', 'Google Cloud', 'Enterprise Software'],
     isActive: true,
     order: 7
-  },
-  {
+  }
+  /*{
     title: 'Network Solutions',
     slug: 'network-solutions',
     category: 'Infrastructure',
@@ -139,7 +139,7 @@ const services = [
     technologies: ['Cisco', 'Ubiquiti', 'Fortinet', 'Palo Alto'],
     isActive: true,
     order: 8
-  }
+  }*/
 ]
 
 const seedServices = async () => {
