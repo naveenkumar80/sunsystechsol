@@ -17,8 +17,8 @@ import {
 const footerLinks = {
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
+    /*{ name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' },*/
     { name: 'Contact', href: '/contact' },
   ],
   services: [
@@ -119,7 +119,7 @@ export default function Footer() {
           </div>
 
           {/* Support Links */}
-          <div>
+          {/*<div>
             <h4 className="text-white font-semibold text-lg mb-6">Support</h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
@@ -133,11 +133,11 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div>*/}
         </div>
 
         {/* Newsletter */}
-        <div className="mt-12 pt-12 border-t border-gray-800">
+        {/*<div className="mt-12 pt-12 border-t border-gray-800">
           <div className="max-w-md">
             <h4 className="text-white font-semibold text-lg mb-4">
               Subscribe to Our Newsletter
@@ -159,7 +159,7 @@ export default function Footer() {
               </button>
             </form>
           </div>
-        </div>
+        </div>*/}
       </div>
 
       {/* Bottom Footer */}

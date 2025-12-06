@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <ServicesGrid />
       <WhyChooseUs />
-      <Testimonials />
+      {/*<Testimonials />*/}
       <FinalCTA />
     </>
   )

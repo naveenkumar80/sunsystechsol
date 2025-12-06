@@ -53,7 +53,7 @@ export default function ContactHero() {
               <Phone className="w-8 h-8 text-accent mx-auto mb-3" />
               <p className="text-white font-semibold mb-1">Phone</p>
               <a href="tel:+919105837321" className="text-gray-200 hover:text-white transition-colors">
-                +91 
+                +91 9105837321
               </a>
             </motion.div>
 

@@ -20,7 +20,7 @@ export default function AboutPage() {
       <AboutStory />
       <AboutMission />
       <AboutValues />
-      <AboutTeam />
+      {/*<AboutTeam />*/}
       <AboutTimeline />
       <AboutCertifications />
       <AboutCTA />

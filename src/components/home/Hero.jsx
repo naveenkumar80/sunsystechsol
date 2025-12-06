@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ArrowRight, Play } from 'lucide-react'
 
 const trustedLogos = [
-  'Company1', 'Company2', 'Company3', 'Company4', 'Company5'
+  'CheloSaathi', 'InternSaathi', 'Company3', 'Company4', 'Company5'
 ]
 
 export default function Hero() {
@@ -56,7 +56,7 @@ export default function Hero() {
             className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm mb-8"
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-            <span>Trusted by 500+ businesses worldwide</span>
+            <span>ISO 9001:2015 certified</span>
           </motion.div>
 
           {/* Headline */}
@@ -107,7 +107,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Trusted By */}
-          <motion.div
+          {/*<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -124,7 +124,7 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </motion.div>*/}
         </motion.div>
       </div>
 

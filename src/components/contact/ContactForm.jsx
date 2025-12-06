@@ -168,11 +168,11 @@ export default function ContactForm() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
             >
               <option value="">Select budget range</option>
-              <option value="under-5k">Under $5,000</option>
-              <option value="5k-10k">$5,000 - $10,000</option>
-              <option value="10k-25k">$10,000 - $25,000</option>
-              <option value="25k-50k">$25,000 - $50,000</option>
-              <option value="50k-plus">$50,000+</option>
+              <option value="under-5k">Under ₹5,000</option>
+              <option value="5k-10k">₹5,000 - ₹10,000</option>
+              <option value="10k-25k">₹10,000 - ₹25,000</option>
+              <option value="25k-50k">₹25,000 - ₹50,000</option>
+              <option value="50k-plus">₹50,000+</option>
               <option value="not-sure">Not Sure Yet</option>
             </select>
           </div>

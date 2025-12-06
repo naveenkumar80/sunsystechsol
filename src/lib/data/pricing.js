@@ -2,7 +2,7 @@ export const pricingPlans = {
   'website-development': [
     {
       name: 'Starter Website',
-      price: '$2,999',
+      price: '₹2,999',
       duration: 'one-time',
       description: 'Perfect for small businesses and startups',
       features: [
@@ -21,7 +21,7 @@ export const pricingPlans = {
     },
     {
       name: 'Professional Website',
-      price: '$6,999',
+      price: '₹7,999',
       duration: 'one-time',
       description: 'Ideal for growing businesses',
       features: [
@@ -42,7 +42,7 @@ export const pricingPlans = {
     },
     {
       name: 'Enterprise Website',
-      price: '$15,999+',
+      price: '₹15,999+',
       duration: 'one-time',
       description: 'For large businesses with complex needs',
       features: [
@@ -66,7 +66,7 @@ export const pricingPlans = {
   'mobile-app': [
     {
       name: 'MVP App',
-      price: '$15,000',
+      price: '₹15,000',
       duration: 'one-time',
       description: 'Launch your idea quickly',
       features: [
@@ -84,7 +84,7 @@ export const pricingPlans = {
     },
     {
       name: 'Professional App',
-      price: '$35,000',
+      price: '₹35,000',
       duration: 'one-time',
       description: 'Full-featured mobile solution',
       features: [
@@ -103,7 +103,7 @@ export const pricingPlans = {
     },
     {
       name: 'Enterprise App',
-      price: '$75,000+',
+      price: '₹75,000+',
       duration: 'one-time',
       description: 'Complex enterprise applications',
       features: [
@@ -125,7 +125,7 @@ export const pricingPlans = {
   'digital-marketing': [
     {
       name: 'Starter',
-      price: '$1,500',
+      price: '₹1,500',
       duration: '/month',
       description: 'Get started with digital marketing',
       features: [
@@ -142,14 +142,14 @@ export const pricingPlans = {
     },
     {
       name: 'Growth',
-      price: '$3,500',
+      price: '₹3,500',
       duration: '/month',
       description: 'Scale your online presence',
       features: [
         '4 social platforms',
         '20 posts per month',
         'Custom graphics & videos',
-        'Paid ad management ($500)',
+        'Paid ad management (₹500)',
         'SEO optimization',
         'Bi-weekly reporting',
         'Dedicated account manager'
@@ -160,14 +160,14 @@ export const pricingPlans = {
     },
     {
       name: 'Enterprise',
-      price: '$7,500',
+      price: '₹7,500',
       duration: '/month',
       description: 'Comprehensive marketing solution',
       features: [
         'All major platforms',
         '40+ posts per month',
         'Full content production',
-        'Paid ad management ($2000+)',
+        'Paid ad management (₹2000+)',
         'Influencer campaigns',
         'Weekly reporting',
         'Strategy consultation',
@@ -181,7 +181,7 @@ export const pricingPlans = {
   'it-support': [
     {
       name: 'Basic',
-      price: '$500',
+      price: '₹500',
       duration: '/month',
       description: 'Essential IT support',
       features: [
@@ -198,7 +198,7 @@ export const pricingPlans = {
     },
     {
       name: 'Standard',
-      price: '$1,200',
+      price: '₹1,200',
       duration: '/month',
       description: 'Comprehensive IT management',
       features: [
@@ -216,7 +216,7 @@ export const pricingPlans = {
     },
     {
       name: 'Premium',
-      price: '$2,500',
+      price: '₹2,500',
       duration: '/month',
       description: 'Enterprise-level support',
       features: [

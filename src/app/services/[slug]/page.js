@@ -77,21 +77,21 @@ export default function ServiceDetailPage({ params }) {
     packages: service.pricing ? [
       {
         name: 'Starter',
-        price: service.pricing.starter?.price || '$2,999',
+        price: service.pricing.starter?.price || '₹2,999',
         description: 'Perfect for small businesses',
         features: service.pricing.starter?.features || [],
         popular: false
       },
       {
         name: 'Professional',
-        price: service.pricing.professional?.price || '$6,999',
+        price: service.pricing.professional?.price || '₹6,999',
         description: 'Ideal for growing businesses',
         features: service.pricing.professional?.features || [],
         popular: true
       },
       {
         name: 'Enterprise',
-        price: service.pricing.enterprise?.price || '$15,999+',
+        price: service.pricing.enterprise?.price || '₹15,999+',
         description: 'For large enterprises',
         features: service.pricing.enterprise?.features || [],
         popular: false

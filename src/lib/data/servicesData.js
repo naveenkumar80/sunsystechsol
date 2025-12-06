@@ -55,7 +55,7 @@ export const servicesData = {
     packages: [
       {
         name: 'Starter',
-        price: '$2,999',
+        price: '₹2,999',
         duration: 'one-time',
         description: 'Perfect for small businesses and startups',
         features: [
@@ -70,7 +70,7 @@ export const servicesData = {
       },
       {
         name: 'Professional',
-        price: '$6,999',
+        price: '₹6,999',
         duration: 'one-time',
         description: 'Ideal for growing businesses',
         features: [
@@ -87,7 +87,7 @@ export const servicesData = {
       },
       {
         name: 'Enterprise',
-        price: '$15,999+',
+        price: '₹15,999+',
         duration: 'one-time',
         description: 'For large businesses with complex needs',
         features: [
@@ -184,7 +184,7 @@ export const servicesData = {
     packages: [
       {
         name: 'Starter App',
-        price: '$15,000',
+        price: '₹15,000',
         duration: 'one-time',
         description: 'Perfect for MVPs and simple apps',
         features: [
@@ -199,7 +199,7 @@ export const servicesData = {
       },
       {
         name: 'Professional App',
-        price: '$35,000',
+        price: '₹35,000',
         duration: 'one-time',
         description: 'Ideal for established businesses',
         features: [
@@ -215,7 +215,7 @@ export const servicesData = {
       },
       {
         name: 'Enterprise App',
-        price: '$75,000+',
+        price: '₹75,000+',
         duration: 'one-time',
         description: 'For complex enterprise applications',
         features: [
@@ -312,7 +312,7 @@ export const servicesData = {
     packages: [
       {
         name: 'Local SEO',
-        price: '$1,000',
+        price: '₹1,000',
         duration: '/month',
         description: 'Perfect for local businesses',
         features: [
@@ -327,7 +327,7 @@ export const servicesData = {
       },
       {
         name: 'National SEO',
-        price: '$2,500',
+        price: '₹2,500',
         duration: '/month',
         description: 'Ideal for growing businesses',
         features: [
@@ -343,7 +343,7 @@ export const servicesData = {
       },
       {
         name: 'Enterprise SEO',
-        price: '$5,000+',
+        price: '₹5,000+',
         duration: '/month',
         description: 'For large enterprises',
         features: [
@@ -399,7 +399,7 @@ export const servicesData = {
         { value: '200+', label: 'Brands Managed' },
         { value: '50M+', label: 'Combined Reach' },
         { value: '300%', label: 'Avg Engagement Increase' },
-        { value: '$5M+', label: 'Ad Spend Managed' }
+        { value: '₹5M+', label: 'Ad Spend Managed' }
       ]
     },
 
@@ -439,7 +439,7 @@ export const servicesData = {
     packages: [
       {
         name: 'Starter',
-        price: '$1,500',
+        price: '₹1,500',
         duration: '/month',
         description: 'Great for small businesses',
         features: [
@@ -453,7 +453,7 @@ export const servicesData = {
       },
       {
         name: 'Growth',
-        price: '$3,500',
+        price: '₹3,500',
         duration: '/month',
         description: 'Perfect for growing brands',
         features: [
@@ -461,7 +461,7 @@ export const servicesData = {
           '20 posts per month',
           'Custom graphics & videos',
           'Advanced community management',
-          '$500 ad spend management',
+          '₹500 ad spend management',
           'Bi-weekly reporting',
           'Influencer outreach'
         ],
@@ -469,7 +469,7 @@ export const servicesData = {
       },
       {
         name: 'Enterprise',
-        price: '$7,500',
+        price: '₹7,500',
         duration: '/month',
         description: 'For established brands',
         features: [
@@ -477,7 +477,7 @@ export const servicesData = {
           '40+ posts per month',
           'Full content production',
           'Dedicated account manager',
-          '$2,000+ ad spend management',
+          '₹2,000+ ad spend management',
           'Weekly reporting',
           'Influencer campaigns',
           'Crisis management'
@@ -565,7 +565,7 @@ export const servicesData = {
     packages: [
     {
         name: 'Basic Support',
-        price: '$500',
+        price: '₹500',
         duration: '/month',
         description: 'Up to 10 users',
         features: [
@@ -579,7 +579,7 @@ export const servicesData = {
     },
     {
         name: 'Standard Support',
-        price: '$1,200',
+        price: '₹1,200',
         duration: '/month',
         description: 'Up to 25 users',
         features: [
@@ -594,7 +594,7 @@ export const servicesData = {
     },
     {
         name: 'Premium Support',
-        price: '$2,500',
+        price: '₹2,500',
         duration: '/month',
         description: 'Up to 50 users',
         features: [
@@ -688,7 +688,7 @@ export const servicesData = {
     packages: [
     {
         name: 'Consultation',
-        price: '$3,000',
+        price: '₹3,000',
         duration: '/month',
         description: 'Strategic guidance',
         features: [
@@ -702,7 +702,7 @@ export const servicesData = {
     },
     {
         name: 'Growth Package',
-        price: '$7,500',
+        price: '₹7,500',
         duration: '/month',
         description: 'Active development',
         features: [
@@ -717,7 +717,7 @@ export const servicesData = {
     },
     {
         name: 'Enterprise',
-        price: '$15,000+',
+        price: '₹15,000+',
         duration: '/month',
         description: 'Full-service support',
         features: [
@@ -811,7 +811,7 @@ export const servicesData = {
     packages: [
     {
         name: 'Hourly',
-        price: '$250',
+        price: '₹250',
         duration: '/hour',
         description: 'Flexible consulting',
         features: [
@@ -825,7 +825,7 @@ export const servicesData = {
     },
     {
         name: 'Monthly Retainer',
-        price: '$5,000',
+        price: '₹5,000',
         duration: '/month',
         description: 'Ongoing support',
         features: [
@@ -840,7 +840,7 @@ export const servicesData = {
     },
     {
         name: 'Project-Based',
-        price: '$15,000+',
+        price: '₹15,000+',
         duration: 'one-time',
         description: 'Complete projects',
         features: [
@@ -934,7 +934,7 @@ export const servicesData = {
     packages: [
     {
         name: 'Small Office',
-        price: '$5,000',
+        price: '₹5,000',
         duration: 'one-time',
         description: 'Up to 25 users',
         features: [
@@ -949,7 +949,7 @@ export const servicesData = {
     },
     {
         name: 'Medium Business',
-        price: '$15,000',
+        price: '₹15,000',
         duration: 'one-time',
         description: 'Up to 100 users',
         features: [
@@ -965,7 +965,7 @@ export const servicesData = {
     },
     {
         name: 'Enterprise',
-        price: '$50,000+',
+        price: '₹50,000+',
         duration: 'one-time',
         description: '100+ users',
         features: [
