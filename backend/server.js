@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 const rateLimit = require('express-rate-limit')
 const connectDB = require('./src/config/database')
 const errorHandler = require('./src/middleware/errorHandler')
-
+console.log("Loaded MONGO_URI =", process.env.MONGO_URI);
 // Connect to database
 connectDB()
 
